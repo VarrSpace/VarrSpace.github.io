@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Konversi Nilai</title>
+    <script>
+        function konversi() {
+            var nilai = document.getElementById("nilai").value;
+            var huruf = nilai >= 81 ? "A" :
+                nilai >= 71 ? "AB" :
+                    nilai >= 66 ? "B" :
+                        nilai >= 61 ? "BC" :
+                            nilai >= 56 ? "C" :
+                                nilai >= 41 ? "D" : "E";
+            document.getElementById("hasil").innerText = huruf;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Masukkan Nilai:</h3>
+    <input type="number" id="nilai">
+    <button onclick="konversi()">Konversi</button>
+    <p>Huruf: <span id="hasil"></span></p>
+</body>
+
+</html>

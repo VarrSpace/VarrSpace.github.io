@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kalkulator</title>
+    <script>
+        function hitung(operasi) {
+            var bil1 = parseFloat(document.getElementById("bil1").value);
+            var bil2 = parseFloat(document.getElementById("bil2").value);
+            var hasil = operasi == '+' ? bil1 + bil2 :
+                operasi == '-' ? bil1 - bil2 :
+                    operasi == '*' ? bil1 * bil2 :
+                        bil1 / bil2;
+            document.getElementById("hasil").innerText = hasil;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Kalkulator</h3>
+    <input type="number" id="bil1">
+    <input type="number" id="bil2">
+    <button onclick="hitung('+')">+</button>
+    <button onclick="hitung('-')">-</button>
+    <button onclick="hitung('*')">*</button>
+    <button onclick="hitung('/')">/</button>
+    <p>Hasil: <span id="hasil"></span></p>
+</body>
+
+</html>
